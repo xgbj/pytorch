@@ -197,7 +197,7 @@ static PyObject* THPModule_initExtension(
   // The main thread usually launches CPU/GPU/Accelerator kernels and therefore
   // becomes latency sensitive. If the thread is named, we can debug performance
   // issues easier.
-  c10::setThreadName("pt_main_thread");
+  // c10::setThreadName("pt_main_thread");
 
   auto module = THPObjectPtr(PyImport_ImportModule("torch"));
   if (!module)
